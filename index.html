@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Search and filter Pokémon using type, color, and gender.">
+  <title>Pokémon Finder</title>
+  <link rel="stylesheet" href="styles.less">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <img src="logo.png" alt="Pokémon Logo" class="logo-image">
+      </div>
+      <div class="header__search">
+        <input type="text" class="header__search-input" placeholder="Search Pokémon...">
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Filters Block -->
+      <aside class="filters">
+        <!-- Filter by type -->
+        <div class="filters__section filters__section--type">
+          <h2 class="filters__title">Type</h2>
+          <ul class="filters__list">
+            <li class="filters__item">
+              <label for="bug" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="bug">Bug</label>
+            </li>
+            <li class="filters__item">
+              <label for="electric" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="electric">Electric</label>
+            </li>
+            <li class="filters__item">
+              <label for="water" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="water">Water</label>
+            </li>
+            <li class="filters__item">
+              <label for="ground" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="ground">Ground</label>
+            </li>
+            <li class="filters__item">
+              <label for="fire" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="fire">Fire</label>
+            </li>
+            <li class="filters__item">
+              <label for="ice" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="ice">Ice</label>
+            </li>
+            <li class="filters__item">
+              <label for="flying" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="flying">Flying</label>
+            </li>
+            <li class="filters__item">
+              <label for="rock" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="rock">Rock</label>
+            </li>
+            <li class="filters__item">
+              <label for="normal" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="normal">Normal</label>
+            </li>
+            <li class="filters__item">
+              <label for="gross" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="gross">Gross</label>
+            </li>
+            <li class="filters__item">
+              <label for="psychic" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="psychic">Psychic</label>
+            </li>
+            <li class="filters__item">
+              <label for="fighting" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="fighting">Fighting</label>
+            </li>
+            <li class="filters__item">
+              <label for="fairy" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="fairy">Fairy</label>
+            </li>
+            <li class="filters__item">
+              <label for="sinister" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="sinister">Sinister</label>
+            </li>
+            <li class="filters__item">
+              <label for="dragon" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="dragon">Dragon</label>
+            </li>
+            <li class="filters__item">
+              <label for="steel" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="steel">Steel</label>
+            </li>
+            <li class="filters__item">
+              <label for="plant" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="plant">Plant</label>
+            </li>
+            <li class="filters__item">
+              <label for="poison" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="poison">Poison</label>
+            </li>
+            <li class="filters__item">
+              <label for="ghost" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="ghost">Ghost</label>
+            </li>
+            <li class="filters__item">
+              <label for="unknown" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="unknown">Unknown</label>
+            </li>
+          </ul>
+        </div>
+        <!-- Filter by color -->
+        <div class="filters__section filters__section--color">
+          <h2 class="filters__title">Color</h2>
+          <ul class="filters__list filters__list--color">
+            <li class="filters__item">
+              <label for="blue" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="blue">Blue</label>
+            </li>
+            <li class="filters__item">
+              <label for="yellow" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="yellow">Yellow</label>
+            </li>
+            <li class="filters__item">
+              <label for="red" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="yellow">Red</label>
+            </li>
+            <li class="filters__item">
+              <label for="brown" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="brown">Brown</label>
+            </li>
+            <li class="filters__item">
+              <label for="grey" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="grey">Grey</label>
+            </li>
+            <li class="filters__item">
+              <label for="green" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="green">Green</label>
+            </li>
+            <li class="filters__item">
+              <label for="pink" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="pink">Pink</label>
+            </li>
+            <li class="filters__item">
+              <label for="white" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="white">White</label>
+            </li>
+            <li class="filters__item">
+              <label for="purple" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="purple">Purple</label>
+            </li>
+            <li class="filters__item">
+              <label for="black" class="filters__label">
+              <input type="checkbox" class="filters__checkbox" value="black">Black</label>
+            </li>
+          </ul>
+        </div>
+        <!-- Filter by gender -->
+        <div class="filters__section filters__section--gender">
+          <h2 class="filters__title">Gender</h2>
+         <ul class="filters__list filters__list--gender">
+            <li class="filters__item">
+              <label for="all" class="filters__label">
+              <input type="radio" name="gender" class="filters__radio" value="all">All</label>
+            </li>
+            <li class="filters__item">
+              <label for="male" class="filters__label">
+              <input type="radio" name="gender" class="filters__radio" value="male">Male</label>
+            </li>
+            <li class="filters__item">
+              <label for="female" class="filters__label">
+              <input type="radio" name="gender" class="filters__radio" value="female">Female</label>
+            </li>
+            <li class="filters__item">
+              <label for="genderless" class="filters__label">
+              <input type="radio" name="gender" class="filters__radio" value="genderless">Genderless</label>
+            </li>
+          </ul>
+        </div>
+      </aside>
+
+      <!-- Content Block -->
+      <section class="pokemon-list">
+        <h2 class="pokemon-list__title">Choose a Pokémon to get more information</h2>
+        <div class="pokemon-list__grid">
+          <!-- Pokémon card -->
+          <div class="pokemon-list__item">
+            <img src="pokemon1.png" alt="Pokemon 1" class="pokemon-list__image">
+            <h4 class="pokemon-list__name">Pokémon 1</h4>
+          </div>
+          <!-- Repeat for other Pokémon -->
+        </div>
+        <button class="pokemon-list__load-more" id="load-more">Load more</button>
+      </section>
+    </main>
+
+    <script src="main.js"></script>
+</body>
+</html>
