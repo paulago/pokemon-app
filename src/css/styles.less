@@ -7,6 +7,10 @@
 @padding: 10px;
 @border-radius: 5px;
 
+/* Breakpoints */
+@tablet: 768px;
+@desktop: 1024px;
+
 /* Global Styles */
 * {
   margin: 0;
@@ -29,18 +33,18 @@ img {
 /* Header */
 .header {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
   padding: @padding;
   background-color: @secondary-color;
-  
+
   &__logo {
     width: 50px;
   }
 
   &__search {
-    flex-grow: 1;
-    margin-left: 15px;
+    width: 100%;
+    margin-top: 10px;
 
     &-input {
       width: 100%;
@@ -49,22 +53,38 @@ img {
       border: 1px solid @primary-color;
     }
   }
+
+  &__reset-button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 16px;
+    background-color: @primary-color;
+    color: white;
+    border: none;
+    border-radius: @border-radius;
+    cursor: pointer;
+  }
+}
+
+/* Main */
+.main {
+  margin-top: 20px;
 }
 
 /* Filters */
 .filters {
-  margin-top: 20px;
-  
   &__section {
     margin-bottom: 20px;
-    
-    &--type, &--color, &--gender {
+
+    &--type,
+    &--color,
+    &--gender {
       padding: @padding;
       background-color: white;
       border-radius: @border-radius;
     }
   }
-  
+
   &__title {
     font-size: 18px;
     margin-bottom: 10px;
@@ -83,17 +103,20 @@ img {
     align-items: center;
   }
 
-  &__checkbox, &__radio {
+  &__checkbox,
+  &__radio {
     margin-right: 10px;
   }
 }
 
 /* Content */
 .pokemon-list {
+  margin-top: 20px;
 
   &__title {
     font-size: 20px;
     margin-bottom: 15px;
+    text-align: center;
   }
 
   &__grid {
@@ -128,5 +151,80 @@ img {
     border: none;
     border-radius: @border-radius;
     margin-top: 20px;
+    cursor: pointer;
+  }
+}
+
+/* Media Queries */
+
+/* Tablet view (min-width: @tablet) */
+@media screen and (min-width: @tablet) {
+
+  /* Header adjustments */
+  .header {
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__search {
+      flex-grow: 1;
+      margin-left: 15px;
+      margin-top: 0;
+    }
+
+    &__reset-button {
+      margin-top: 0;
+      margin-left: 15px;
+    }
+  }
+
+  /* Adjust font sizes */
+  .filters__title,
+  .pokemon-list__title {
+    font-size: 22px;
+  }
+
+  .pokemon-list__name {
+    font-size: 18px;
+  }
+
+  /* Pokemon grid */
+  .pokemon-list__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Desktop view (min-width: @desktop) */
+@media screen and (min-width: @desktop) {
+
+  /* Main layout adjustments */
+  .main {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  /* Filters sidebar */
+  .filters {
+    width: 25%;
+    margin-right: 20px;
+  }
+
+  /* Content area */
+  .pokemon-list {
+    width: 75%;
+  }
+
+  /* Adjust font sizes */
+  .filters__title,
+  .pokemon-list__title {
+    font-size: 24px;
+  }
+
+  .pokemon-list__name {
+    font-size: 20px;
+  }
+
+  /* Pokemon grid */
+  .pokemon-list__grid {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
